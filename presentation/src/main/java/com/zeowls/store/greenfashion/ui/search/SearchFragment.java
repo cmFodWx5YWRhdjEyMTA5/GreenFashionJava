@@ -24,7 +24,7 @@ import com.jakewharton.rxbinding2.view.RxView;
 import com.zeowls.domain.entity.MainCats;
 import com.zeowls.domain.entity.Search;
 import com.zeowls.domain.interactor.BrandProducts_interactor;
-import com.zeowls.domain.interactor.SubCatProducts_interactor;
+import com.zeowls.domain.interactor.MainCatProducts_interactor;
 import com.zeowls.domain.scope.ApplicationScope;
 import com.zeowls.store.greenfashion.App;
 import com.zeowls.store.greenfashion.R;
@@ -33,7 +33,6 @@ import com.zeowls.store.greenfashion.di.module.PresenterModule;
 import com.zeowls.store.greenfashion.ui.adapter.search.MainCatsAdapter;
 import com.zeowls.store.greenfashion.ui.adapter.search.SearchAdapter;
 import com.zeowls.store.greenfashion.ui.base.BaseFragment;
-import com.zeowls.store.greenfashion.ui.categories.CategoriesFragment;
 import com.zeowls.store.greenfashion.ui.list.ListFragment;
 import com.zeowls.store.greenfashion.ui.main.MainActivity;
 import com.zeowls.store.greenfashion.ui.view.ClearFocusEditText;
@@ -46,7 +45,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import io.reactivex.disposables.CompositeDisposable;
 
-import static com.zeowls.store.greenfashion.ui.list.optionList.options.BRAND;
 import static com.zeowls.store.greenfashion.ui.list.optionList.options.CAT;
 import static com.zeowls.store.greenfashion.ui.main.MainActivity.navigationState.CHILD;
 
@@ -84,7 +82,7 @@ public class SearchFragment extends BaseFragment implements SearchContract.View,
     }
 
     @Inject
-    SubCatProducts_interactor subProducts;
+    MainCatProducts_interactor mainCatProducts;
 
     @Inject
     BrandProducts_interactor brandProducts;
@@ -385,17 +383,7 @@ public class SearchFragment extends BaseFragment implements SearchContract.View,
         etSearch.setText(search.getName());
         ((MainActivity) getActivity()).hideKeyboard();
         presenter.addRecent(search.getName());
-        switch (search.getType()) {
-            case 0: //main
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, CategoriesFragment.newInstance(search.getId(), search.getName()), CHILD.name()).addToBackStack(null).commit();
-                break;
-            case 1:
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, ListFragment.newInstance(subProducts, search.getId(), true, true, search.getName(), CAT.name(), -1), CHILD.name()).addToBackStack(null).commit();
-                break;
-            case 2:
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, ListFragment.newInstance(brandProducts, search.getId(), true, true, search.getName(), BRAND.name(), -1), CHILD.name()).addToBackStack(null).commit();
-                break;
-        }
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, ListFragment.newInstance(mainCatProducts, search.getId(), true, true, search.getName(), CAT.name(), -1), CHILD.name()).addToBackStack(null).commit();
     }
 
     @Override

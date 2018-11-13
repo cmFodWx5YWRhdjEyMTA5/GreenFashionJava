@@ -41,6 +41,6 @@
 
     <include layout="@layout/progressbar" />
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_title" />
 
 </android.support.design.widget.CoordinatorLayout>

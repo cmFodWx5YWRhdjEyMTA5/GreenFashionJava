@@ -171,5 +171,7 @@
     <string name="sign_up" translatable="false">Sign up</string>
     <string name="sign_in" translatable="false">Sign in</string>
     <string name="email_address" translatable="false">Email Address</string>
-    <string name="mobile_no">Mobile No.</string>
+    <string name="mobile_no" translatable="false">Mobile No.</string>
+    <string name="language" translatable="false">Language</string>
+    <string name="sign_out" translatable="false">Sign out</string>
 </resources>

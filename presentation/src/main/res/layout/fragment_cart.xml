@@ -100,7 +100,7 @@
         android:visibility="gone" />
 
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_title" />
 
     <include layout="@layout/progressbar" />
 

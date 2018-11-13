@@ -1,6 +1,7 @@
 package com.zeowls.store.greenfashion.ui.profile;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -76,7 +77,7 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
     @BindView(R.id.list)
     RecyclerView recyclerView;
     @Nullable
-    @BindView(R.id.username)
+    @BindView(R.id.name)
     TextView username;
     @Nullable
     @BindView(R.id.email)
@@ -116,7 +117,6 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
         }
         mGoogleApiClient.connect();
         user = LoggedData.getUserObject(getActivity());
-        imageView.getBackground().setLevel(5000);
         recyclerView.setHasFixedSize(true);
         if (user == null)
             guest();
@@ -126,25 +126,19 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
 
     private void guest() {
         toolbarTitle.setText(R.string.settings);
-        String[] title = getResources().getStringArray(R.array.guest_title);
-        int[] images = {R.drawable.ic_rate_us, R.drawable.share, R.drawable.ic_policy};
+        String[] title = getResources().getStringArray(R.array.off_profile_title);
+        TypedArray images = getResources().obtainTypedArray(R.array.off_profile_image);
         List<Profile> profileList = new ArrayList<>();
-        for (int i = 0; i < images.length; i++) {
+        for (int i = 0; i < title.length; i++) {
             Profile profile = new Profile();
-            profile.setImage(images[i]);
+            profile.setImage(images.getResourceId(i,0));
             profile.setTitle(title[i]);
             profileList.add(profile);
         }
-        GlideApp.with(getActivity()).load(R.drawable.ic_profile_pic).apply(RequestOptions.circleCropTransform()).into(imageView);
         mAdapter = new ProfileAdapter(getActivity(), this);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         recyclerView.setAdapter(mAdapter);
         mAdapter.setData(profileList);
-    }
-
-    @OnClick(R.id.language)
-    public void onLanguage(View view) {
-        new ViewDialog().showLanguageDialog(getActivity(), getString(R.string.change_language_content), this);
     }
 
     private void logged(User user) {
@@ -152,27 +146,20 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
         username.setText(LoggedData.getUserObject(getActivity()).getUsername());
         email.setText(LoggedData.getUserObject(getActivity()).getEmail());
 
-        int[] images = {R.drawable.ic_my_order, R.drawable.ic_edit, R.drawable.ic_address_book, R.drawable.ic_rate_us, R.drawable.share, R.drawable.ic_policy, R.drawable.ic_installment, R.drawable.ic_logout};
+        TypedArray images = getResources().obtainTypedArray(R.array.profile_image);
         String[] title = getResources().getStringArray(R.array.profile_title);
         List<Profile> profileList = new ArrayList<>();
-        for (int i = 0; i < images.length; i++) {
+        for (int i = 0; i < title.length; i++) {
             Profile profile = new Profile();
-            profile.setImage(images[i]);
+            profile.setImage(images.getResourceId(i,0));
             profile.setTitle(title[i]);
             profileList.add(profile);
         }
-        Log.d("HERE", user.getProfilePic());
         GlideApp.with(Objects.requireNonNull(getActivity())).load(user.getProfilePic()).placeholder(R.drawable.ic_profile_pic).skipMemoryCache(true).apply(RequestOptions.circleCropTransform()).into(imageView);
         mAdapter = new ProfileAdapter(getActivity(), this, true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recyclerView.setAdapter(mAdapter);
         mAdapter.setData(profileList);
-    }
-
-    @Optional
-    @OnClick(R.id.login)
-    public void onLogin() {
-        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, LoginFragment.newInstance()).addToBackStack(null).commit();
     }
 
 
@@ -182,9 +169,10 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
     }
 
     @Override
-    public void onEdit() {
-        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, EditFragment.newInstance()).addToBackStack(null).commit();
+    public void onLanguage() {
+
     }
+
 
     @Override
     public void onAddressBook() {
@@ -198,7 +186,11 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
 
     @Override
     public void onReview() {
+    }
 
+    @Override
+    public void onSignIn() {
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, LoginFragment.newInstance()).addToBackStack(null).commit();
     }
 
     @Override
@@ -206,16 +198,6 @@ public class ProfileFragment extends BaseFragment implements ProfileAdapter.onPr
         share();
     }
 
-    @Override
-    public void onReturnPolicy() {
-        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, PolicyFragment.newInstance()).addToBackStack(null).commit();
-
-    }
-
-    @Override
-    public void onInstallment() {
-        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, InstallmentFragment.newInstance()).addToBackStack(null).commit();
-    }
 
     @Override
     public void onLogout() {

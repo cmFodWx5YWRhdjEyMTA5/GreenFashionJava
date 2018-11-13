@@ -1,98 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@android:color/white"
     android:clickable="true"
     android:focusable="true">
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg">
-
-        <include
-            android:id="@+id/header"
-            layout="@layout/toolbar_transparent" />
-
-        <Space
-            android:id="@+id/space"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBackground"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/space">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/username"
-                style="@style/TextStyle.Title"
+            <ImageView
+                android:id="@+id/profile_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="85dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_user_black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Ahmed Maher" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextStyle.Title.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                tools:text="Eslam" />
+
+            <TextView
                 android:id="@+id/email"
-                style="@style/TextStyle.Comment"
+                style="@style/TextStyle.Title.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/username"
-                tools:text="Ahmed@Gmail.com" />
+                android:layout_marginTop="4dp"
+                android:textColor="@color/textDark"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                tools:text="Eslam" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/list"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:nestedScrollingEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/email" />
+                app:layout_constraintTop_toBottomOf="@+id/email">
+
+            </android.support.v7.widget.RecyclerView>
 
 
         </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
 
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/half_circle"
-            android:padding="6dp"
-            app:layout_constraintBottom_toTopOf="@+id/container"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container" />
+    <include layout="@layout/toolbar_title" />
 
-        <ImageView
-            android:id="@+id/language"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_language"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/space" />
-    </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
-
-
-
+</android.support.design.widget.CoordinatorLayout>

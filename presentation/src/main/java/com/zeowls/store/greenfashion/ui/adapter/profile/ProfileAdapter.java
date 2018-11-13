@@ -44,7 +44,7 @@ public class ProfileAdapter extends BaseAdapter<Profile> {
     public interface onProfileActive {
         void onOrders();
 
-        void onEdit();
+        void onLanguage();
 
         void onAddressBook();
 
@@ -54,21 +54,19 @@ public class ProfileAdapter extends BaseAdapter<Profile> {
 
         void onShare();
 
-        void onReturnPolicy();
-
-        void onInstallment();
-
         void onLogout();
     }
 
 
     public interface onProfile {
 
-        void onRateUs();
+        void onSignIn();
 
         void onShare();
 
-        void onReturnPolicy();
+        void onRateUs();
+
+        void onLanguage();
 
     }
 
@@ -78,7 +76,7 @@ public class ProfileAdapter extends BaseAdapter<Profile> {
         ImageView image;
         @BindView(R.id.title)
         TextView title;
-        @BindView(R.id.click)
+        @BindView(R.id.view_click)
         View click;
 
         ProfileViewHolder(View itemView) {
@@ -104,10 +102,10 @@ public class ProfileAdapter extends BaseAdapter<Profile> {
                         onProfileActive.onOrders();
                         break;
                     case 1:
-                        onProfileActive.onEdit();
+                        onProfileActive.onAddressBook();
                         break;
                     case 2:
-                        onProfileActive.onAddressBook();
+                        onProfileActive.onReview();
                         break;
                     case 3:
                         onProfileActive.onRateUs();
@@ -116,25 +114,25 @@ public class ProfileAdapter extends BaseAdapter<Profile> {
                         onProfileActive.onShare();
                         break;
                     case 5:
-                        onProfileActive.onReturnPolicy();
+                        onProfileActive.onLanguage();
                         break;
                     case 6:
-                        onProfileActive.onInstallment();
-                        break;
-                    case 7:
                         onProfileActive.onLogout();
                         break;
                 }
             } else {
                 switch (position) {
                     case 0:
-                        onProfile.onRateUs();
+                        onProfile.onSignIn();
                         break;
                     case 1:
-                        onProfile.onShare();
+                        onProfile.onRateUs();
                         break;
                     case 2:
-                        onProfile.onReturnPolicy();
+                        onProfile.onShare();
+                        break;
+                    case 3:
+                        onProfile.onLanguage();
                         break;
                 }
             }

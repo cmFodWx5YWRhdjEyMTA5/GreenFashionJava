@@ -35,37 +35,37 @@
 
 
     <integer-array name="profile_image">
-        <item>@drawable/ic_my_order</item>
-        <item>@drawable/ic_edit</item>
+        <item>@drawable/ic_my_orders</item>
         <item>@drawable/ic_address_book</item>
+        <item>@drawable/ic_reviews</item>
         <item>@drawable/ic_rate_us</item>
-        <item>@drawable/ic_review_us</item>
-        <item>@drawable/share</item>
-        <item>@drawable/ic_policy</item>
-        <item>@drawable/ic_installment</item>
-        <item>@drawable/ic_logout</item>
+        <item>@drawable/ic_share_accent</item>
+        <item>@drawable/ic_language</item>
+        <item>@drawable/ic_sign_out</item>
     </integer-array>
 
     <array name="profile_title">
         <item>@string/my_orders</item>
-        <item>@string/edit</item>
         <item>@string/address_book</item>
+        <item>@string/my_reviews</item>
         <item>@string/rate_us</item>
         <item>@string/share</item>
-        <item>@string/returning_policy</item>
-        <item>@string/installment</item>
-        <item>@string/logout</item>
+        <item>@string/language</item>
+        <item>@string/sign_out</item>
     </array>
 
-    <array name="guest_image">
+
+    <integer-array name="off_profile_image">
+        <item>@drawable/ic_sign_in</item>
         <item>@drawable/ic_rate_us</item>
-        <item>@drawable/share</item>
-        <item>@drawable/ic_policy</item>
-    </array>
+        <item>@drawable/ic_share_accent</item>
+        <item>@drawable/ic_language</item>
+    </integer-array>
 
-    <array name="guest_title">
+    <array name="off_profile_title">
+        <item>@string/sign_in</item>
         <item>@string/rate_us</item>
         <item>@string/share</item>
-        <item>@string/returning_policy</item>
+        <item>@string/language</item>
     </array>
 </resources>
