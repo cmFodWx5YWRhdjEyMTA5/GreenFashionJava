@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="options_cat">
+        <item>add to cart</item>
+        <item>share</item>
+    </array>
+
+    <array name="options_brand">
+        <item>add to cart</item>
+        <item>share</item>
+    </array>
+
+    <array name="options_extend">
+        <item>add to cart</item>
+        <item>share</item>
+    </array>
+
+    <array name="location_type">
+        <item>Home</item>
+        <item>Business</item>
+    </array>
+
+    <array name="preferred_time">
+        <item>9AM-1PM</item>
+        <item>1PM-5PM</item>
+        <item>5PM-9PM</item>
+    </array>
+
+    <array name="steps">
+        <item>In-processing</item>
+        <item>Confirmed</item>
+        <item>Shipped</item>
+        <item>Delivered</item>
+    </array>
+
+
+    <integer-array name="profile_image">
+        <item>@drawable/ic_my_order</item>
+        <item>@drawable/ic_edit</item>
+        <item>@drawable/ic_address_book</item>
+        <item>@drawable/ic_rate_us</item>
+        <item>@drawable/ic_review_us</item>
+        <item>@drawable/share</item>
+        <item>@drawable/ic_policy</item>
+        <item>@drawable/ic_installment</item>
+        <item>@drawable/ic_logout</item>
+    </integer-array>
+
+    <array name="profile_title">
+        <item>@string/my_orders</item>
+        <item>@string/edit</item>
+        <item>@string/address_book</item>
+        <item>@string/rate_us</item>
+        <item>@string/share</item>
+        <item>@string/returning_policy</item>
+        <item>@string/installment</item>
+        <item>@string/logout</item>
+    </array>
+
+    <array name="guest_image">
+        <item>@drawable/ic_rate_us</item>
+        <item>@drawable/share</item>
+        <item>@drawable/ic_policy</item>
+    </array>
+
+    <array name="guest_title">
+        <item>@string/rate_us</item>
+        <item>@string/share</item>
+        <item>@string/returning_policy</item>
+    </array>
+</resources>

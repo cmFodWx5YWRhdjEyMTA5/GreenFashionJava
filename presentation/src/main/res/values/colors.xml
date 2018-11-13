@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#64B800</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="dimBackground">#f9fafa</color>
+    <color name="textDark">#222222</color>
+    <color name="textLight">#666666</color>
+    <color name="colorFocused">#64dcdcdc</color>
+    <color name="textSemiLight">#b7b7b7</color>
+    <color name="colorBorder">#DCDCDC</color>
+    <color name="colorInactive">#777777</color>
+
+
+
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
+    <color name="spinner_base_color">#44000000</color>
+    <color name="spinner_hint_text_color">#ffffcc</color>
+
+
+    <color name="yellow">#e9c226</color>
+
+
+    <color name="stepview_circle_done">#ff00be62</color>
+    <color name="stepview_circle_selected">@color/yellow</color>
+    <color name="stepview_line_done">@color/colorAccent</color>
+    <color name="stepview_line_next">@color/colorPrimary</color>
+    <color name="stepview_mark">@color/stepview_selected_number</color>
+    <color name="stepview_selected_number">@android:color/white</color>
+    <color name="stepview_text_done">#ff00be62</color>
+    <color name="stepview_text_next">@color/colorPrimary</color>
+    <color name="stepview_text_selected">@color/textDark</color>
+
+</resources>

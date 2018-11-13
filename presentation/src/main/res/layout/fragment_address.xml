@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:contentInsetEnd="10dp"
+            app:contentInsetStart="10dp"
+            app:titleTextColor="@color/textDark">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextStyle.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/address_book"
+                    android:textColor="@color/textDark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/save"
+                    style="@style/TextStyle.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollViewid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <com.zeowls.store.greenfashion.ui.view.MapViewV2
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/map" />
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/firstname_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+                <EditText
+                    android:id="@+id/firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/lastname_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstname_input_layout">
+
+                <EditText
+                    android:id="@+id/lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/country_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastname_input_layout">
+
+                <EditText
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/country"
+                    android:imeOptions="actionDone"
+                    android:inputType="none"
+                    android:text="@string/egypt" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.MaterialSpinner
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/country_input_layout"
+                app:ms_alignLabels="true"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_dropDownHintView="@layout/item_dropdown"
+                app:ms_floatingLabelColor="@color/colorAccent"
+                app:ms_hint="@string/city"
+                app:ms_hintView="@layout/item_hint"
+                app:ms_multiline="false"
+                app:ms_typeface="@font/font" />
+
+            <com.zeowls.store.greenfashion.ui.view.MaterialSpinner
+                android:id="@+id/area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/city"
+                app:ms_alignLabels="true"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_dropDownHintView="@layout/item_dropdown"
+                app:ms_floatingLabelColor="@color/colorAccent"
+                app:ms_hint="@string/area"
+                app:ms_hintView="@layout/item_hint"
+                app:ms_multiline="false"
+                app:ms_typeface="@font/font" />
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/street_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/area">
+
+                <EditText
+                    android:id="@+id/street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/street"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/building_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/street_input_layout">
+
+                <EditText
+                    android:id="@+id/building"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/building_no"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/floot_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/building_input_layout">
+
+                <EditText
+                    android:id="@+id/floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/floor"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/apartment_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/floot_input_layout">
+
+                <EditText
+                    android:id="@+id/apartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/apartment_no"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/landmark_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apartment_input_layout">
+
+                <EditText
+                    android:id="@+id/landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/close_landmark"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.MaterialSpinner
+                android:id="@+id/location_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/landmark_input_layout"
+                app:ms_alignLabels="true"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_dropDownHintView="@layout/item_dropdown"
+                app:ms_floatingLabelColor="@color/colorAccent"
+                app:ms_hint="@string/location_type"
+                app:ms_hintView="@layout/item_hint"
+                app:ms_multiline="false"
+                app:ms_typeface="@font/font" />
+
+            <com.zeowls.store.greenfashion.ui.view.MaterialSpinner
+                android:id="@+id/preferred_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_type"
+                app:ms_alignLabels="true"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_dropDownHintView="@layout/item_dropdown"
+                app:ms_floatingLabelColor="@color/colorAccent"
+                app:ms_hint="@string/delivery_time"
+                app:ms_hintView="@layout/item_hint"
+                app:ms_multiline="false"
+                app:ms_typeface="@font/font" />
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/mobile_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preferred_time">
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/mobile_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/landline_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mobile_input_layout">
+
+                <EditText
+                    android:id="@+id/landline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/landline"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+
+            <com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType
+                android:id="@+id/notes_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/landline_input_layout">
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/shipping_notes"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </com.zeowls.store.greenfashion.ui.view.TextInputLayoutFaceType>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

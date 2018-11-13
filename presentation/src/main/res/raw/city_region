@@ -1,0 +1,216 @@
+[
+  {
+    "name": "Tanta",
+    "region": []
+  },
+  {
+    "name": "10th Of Ramadan City",
+    "region": []
+  },
+  {
+    "name": "6 Of October",
+    "region": []
+  },
+  {
+    "name": "Al Arish",
+    "region": []
+  },
+  {
+    "name": "Al mahala",
+    "region": []
+  },
+  {
+    "name": "Al Mansoura",
+    "region": []
+  },
+  {
+    "name": "Alexandria ",
+    "region": [
+      "Abou Kir",
+      "Agami",
+      "Asafra",
+      "Azarita",
+      "Bahary",
+      "Bolkly",
+      "Borg El Arab",
+      "Cleopatra",
+      "El Montaza",
+      "Fleming",
+      "Gleem",
+      "Ibrahimya",
+      "lauran",
+      "Maamoura",
+      "Mandara",
+      "Manshia",
+      "Miami",
+      "Moharam Bek",
+      "Moustafa Kamel",
+      "Raml Station",
+      "Roushdy",
+      "San Estefano",
+      "Shatby",
+      "Sidi Bishr",
+      "Sidi gaber",
+      "Smouha",
+      "Sporting",
+      "Victoria",
+      "Zezenia"
+    ]
+  },
+  {
+    "name": "Assuit",
+    "region": []
+  },
+  {
+    "name": "Aswan",
+    "region": []
+  },
+  {
+    "name": "Bani Swif",
+    "region": []
+  },
+  {
+    "name": "Banha",
+    "region": []
+  },
+  {
+    "name": "Cairo",
+    "region": [
+      "15th of May City",
+      "Abbasiyya",
+      "Abbasiyya",
+      "Amiria",
+      "Azhar",
+      "Basateen",
+      "Boulak Abo el Eila",
+      "boulak El Dakroor",
+      "Citadel (El-Kal3a)",
+      "Daher",
+      "Down Town",
+      "El Rehab",
+      "El Tahrir",
+      "Garden City",
+      "Ghamra",
+      "Hadaiq Al-Qubba",
+      "Heliopolis",
+      "Helmeya",
+      "Kasr El Eini",
+      "Kattamia",
+      "Maadi",
+      "Manyal",
+      "Masaken Sheraton",
+      "Matareya",
+      "Misr El-Kadima",
+      "Mokattam",
+      "Nasr City",
+      "New Maadi",
+      "New Nozha",
+      "Obour City",
+      "Ramsis",
+      "Sayeda Naffisa",
+      "Sayeda Zeinab",
+      "Saharabeya",
+      "Shoubra",
+      "Shoubra El Khema",
+      "Tagm3 Khames",
+      "Zamalek",
+      "Zaytoon "
+    ]
+  },
+  {
+    "name": "Damanhour",
+    "region": []
+  },
+  {
+    "name": "Dumiat",
+    "region": []
+  },
+  {
+    "name": "El Wadi El Gadid",
+    "region": []
+  },
+  {
+    "name": "Fayoum",
+    "region": []
+  },
+  {
+    "name": "Giza",
+    "region": [
+      "Agouza",
+      "Dokkia",
+      "Faissal",
+      "Giza and Pyramids",
+      "Harania",
+      "Imbaba",
+      "Kitkat",
+      "Mansoureya",
+      "Mohandessin",
+      "Saft El Laban"
+    ]
+  },
+  {
+    "name": "Helwan",
+    "region": []
+  },
+  {
+    "name": "Hurghada",
+    "region": []
+  },
+  {
+    "name": "Ismailia",
+    "region": []
+  },
+  {
+    "name": "Kafr Al Sheikh",
+    "region": []
+  },
+  {
+    "name": "Luxor",
+    "region": []
+  },
+  {
+    "name": "Marsa Matrouh",
+    "region": []
+  },
+  {
+    "name": "Minia",
+    "region": []
+  },
+  {
+    "name": "New Salhia",
+    "region": []
+  },
+  {
+    "name": "Post Said",
+    "region": []
+  },
+  {
+    "name": "Qena",
+    "region": []
+  },
+  {
+    "name": "Sadat City",
+    "region": []
+  },
+  {
+    "name": "Sahrm Sheikh",
+    "region": []
+  },
+  {
+    "name": "Shebin El Koum",
+    "region": []
+  },
+  {
+    "name": "Sohag City",
+    "region": []
+  },
+  {
+    "name": "Suez",
+    "region": []
+  },
+  {
+    "name": "Zakazik",
+    "region": []
+  }
+]
+

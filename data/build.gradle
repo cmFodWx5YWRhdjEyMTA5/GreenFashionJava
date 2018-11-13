@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.dependencies
+def testLibs = rootProject.ext.testDependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner config.testInstrumentationRunner
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+dependencies {
+    implementation project(':domain')
+    api libs.retrofit
+    api libs.interceptor
+    api libs.gsonConverter
+    api libs.rxAdapter
+    api libs.gson
+    api libs.room
+    api libs.rxRoom
+    annotationProcessor libs.roomCompiler
+}

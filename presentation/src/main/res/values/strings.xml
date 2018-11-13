@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">Green Fashion</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="no_products">No Products</string>
+    <string name="proceed_to_checkout">Proceed To Checkout</string>
+    <string name="order_price">Order Price</string>
+    <string name="user_account">User Account</string>
+    <string name="filter">Filter</string>
+    <string name="brands">Brands</string>
+    <string name="more">More</string>
+    <string name="categories">Categories</string>
+    <string name="ads">Ads</string>
+    <string name="hot_product">Hot Products</string>
+    <string name="new_arrival">New Arrival</string>
+    <string name="no_internet">No Internet connection available</string>
+    <string name="all_brands">All Brands</string>
+    <string name="all_categories">All Categories</string>
+    <string name="shop_by_category">Shop by category</string>
+    <string name="top_items">Top Items</string>
+    <string name="find_the_product_you_wish">Find the Product you wish</string>
+    <string name="search_for_categories_and_brands">Search for categories and brands.</string>
+    <string name="clear">Clear</string>
+    <string name="recent_search">Recent Search</string>
+    <string name="clear_recent_searches">Clear recent searches</string>
+    <string name="quantity">Quantity</string>
+    <string name="quantity_tag">Quantity : %d</string>
+    <string name="currency">%d L.E</string>
+    <string name="strike_line" translatable="false"> <strike>%d</strike></string>
+    <string name="move_to_favorite">Move to Favorite</string>
+    <string name="remove">Remove</string>
+    <string name="free_shipping">Free Shipping</string>
+    <string name="colors">Colors</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="no_reviews_yet">No Reviews Yet</string>
+    <string name="more_reviews">More Reviews</string>
+    <string name="similar">Similar</string>
+    <string name="reviews">Reviews</string>
+    <string name="desc">Description</string>
+    <string name="spec">Specification</string>
+    <string name="close">Close</string>
+    <string name="done">Done</string>
+    <string name="price">Price</string>
+    <string name="price_range">Price Range</string>
+    <string name="brand">Brand</string>
+    <string name="toward" translatable="false"><![CDATA[>]]></string>
+    <string name="item">Item</string>
+    <string name="or">OR</string>
+    <string name="login">Login</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="signup_offer">Don\'t have account?</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="register">Register</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="signup">Signup</string>
+
+    <string name="incorrect_password">Incorrect Password</string>
+    <string name="incorrect_email">Incorrect Email</string>
+    <string name="incorrect_old_password">Incorrect old password</string>
+    <string name="duplicated_email">Email already exists</string>
+
+
+    <string name="facebook_app_id" translatable="false">596835210735251</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb596835210735251</string>
+
+    <string name="client_id" translatable="false">489552210236-6l40q13kpkpmulhrlvcm2s777m0r4njs.apps.googleusercontent.com</string>
+
+    //ProfileList
+    <string name="my_orders">My Orders</string>
+    <string name="edit">Edit</string>
+    <string name="address_book">Address Book</string>
+    <string name="rate_us">Rate us</string>
+    <string name="my_reviews">My Reviews</string>
+    <string name="share">Share</string>
+    <string name="installment">Installment</string>
+    <string name="logout">Logout</string>
+    <string name="returning_policy">Returning Policy</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="save">Save</string>
+    <string name="required">Required</string>
+    <string name="rationale_ask">This app may not work correctly without the requested permissions.</string>
+    <string name="rationale_ask_again">This app may not work correctly without the requested permissions. Open the app settings screen to modify app permissions.</string>
+    <string name="rationale_read_storage">App needs permission to upload profile picture</string>
+    <string name="rationale_location">App needs permission to locate address</string>
+    <string name="password_limit">8-16 letters</string>
+    <string name="password_match">doesn\'t match</string>
+    <string name="progress" translatable="false">%d %%</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="you_re_offline">You\'re offline</string>
+    <string name="please_connect_to_the_internet_and_try_again">please connect to the internet and try again.</string>
+    <string name="egypt">Egypt</string>
+    <string name="country">Country</string>
+    <string name="shipping_notes">Shipping Notes</string>
+    <string name="landline">LandLine</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="street">Street</string>
+    <string name="building_no">Building No.</string>
+    <string name="floor">Floor</string>
+    <string name="apartment_no">Apartment No.</string>
+    <string name="close_landmark">Close Landmark</string>
+    <string name="city">City</string>
+    <string name="area">Area</string>
+    <string name="location_type">Location Type</string>
+    <string name="delivery_time">Delivery Time</string>
+    <string name="add_address">Add Address</string>
+    <string name="edit_address">Edit address</string>
+    <string name="orders">Orders</string>
+    <string name="rate">Rate</string>
+    <string name="delivery_date">Delivery Date</string>
+    <string name="payment_summary">Payment Summary</string>
+    <string name="payment_method_cash">Payment Method : Cash</string>
+    <string name="not_specified">Not Specified</string>
+    <string name="order_details">Order Details</string>
+    <string name="shipping_no">Shipping No.</string>
+    <string name="LE">L.E</string>
+    <string name="order_price_tag">Order price : %d %s</string>
+    <string name="total_tag">Total : %d %s</string>
+    <string name="total">Total</string>
+    <string name="shipping_fee">Shipping fee :</string>
+    <string name="shipping_fee_tag">Shipping fee : %dL.E</string>
+    <string name="no_cart_yet">No Products were added to the cart yet.</string>
+    <string name="no_favorite_yet">No Products were added to the favorite yet.</string>
+    <string name="off">% OFF</string>
+    <string name="submit_order">submit order</string>
+    <string name="delivery_option">Delivery option</string>
+    <string name="payment_option">Payment Option</string>
+    <string name="cash">Cash</string>
+    <string name="shipment">Shipment</string>
+    <string name="cash_on_delivery">Cash on delivery</string>
+    <string name="products">Products</string>
+    <string name="order_summary">Order summary</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="product">Product</string>
+    <string name="do_you_want_to_cancel_the_order">Do you want to cancel the order?</string>
+    <string name="email_validation">Enter valid email</string>
+    <string name="transition_product">product_image</string>
+    <string name="config_scheme" translatable="false">https</string>
+    <string name="config_host" translatable="false">hyper-site-stage.herokuapp.com</string>
+    <string name="config_path_deep" translatable="false">product</string>
+    <string name="proposal">Hey, check out this product I found: %s</string>
+    <string name="suggested_searches">Suggested Searches</string>
+    <string name="change_language_content">change language to arabic?</string>
+    <string name="limit">limited product</string>
+    <string name="sold_out">Sold out</string>
+    <string name="sold_out_warn">sold out product\'s won\'t be ordered</string>
+    <string name="collection">Collection</string>
+    <string name="ok">OK</string>
+    <string name="update">There is a new version available, Please Update.</string>
+
+    <string name="welcome_to_green_fashion" translatable="false">Welcome To Green Fashion</string>
+    <string name="already_have_an_account" translatable="false">Already Have an Account?</string>
+    <string name="don_t_have_an_account" translatable="false">Don\'t Have an Account?</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="email_address" translatable="false">Email Address</string>
+    <string name="mobile_no">Mobile No.</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title"
+    style="@style/TextStyle.Title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackgroundBorderless"
+    android:paddingBottom="8dp"
+    android:paddingEnd="8dp"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:textColor="@color/textDark" />
+

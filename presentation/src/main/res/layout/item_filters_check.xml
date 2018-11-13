@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextStyle.Heading"
+        android:background="@drawable/list_item_background"
+        android:drawableEnd="@drawable/ic_arrow_up"
+        android:drawablePadding="16dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:id="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:text="@string/brand"
+        android:textColor="@color/textDark" />
+
+    <com.zeowls.store.greenfashion.ui.view.expandableLayout.ExpandableLayout
+        app:el_duration="300"
+        app:el_expanded="true"
+        android:id="@+id/expand_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="match_parent">
+
+        <com.zeowls.store.greenfashion.ui.view.RecyclerviewMaxHeight
+            android:id="@+id/rv_check"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbarThumbVertical="@drawable/scrollup_2"
+            android:scrollbarTrackVertical="@drawable/scrollup"
+            android:scrollbars="vertical" />
+    </com.zeowls.store.greenfashion.ui.view.expandableLayout.ExpandableLayout>
+</android.support.constraint.ConstraintLayout>

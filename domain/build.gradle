@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.dependencies
+def testLibs = rootProject.ext.testDependencies
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+dependencies {
+    api libs.dagger
+    api libs.rxAndroid
+    api libs.rxJava
+    implementation libs.appcompat
+}
+
+

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "489552210236",
+    "firebase_url": "https://greenfashion-1542089016154.firebaseio.com",
+    "project_id": "greenfashion-1542089016154",
+    "storage_bucket": "greenfashion-1542089016154.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489552210236:android:e8ca5efe50f6d00f",
+        "android_client_info": {
+          "package_name": "com.zeowls.store.greenfashion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489552210236-0ta5agl486pq2lqnbo9knftfar7mg5ak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zeowls.store.greenfashion",
+            "certificate_hash": "40d3a845c92b8bb488da8c78a737cba70bdb3bfa"
+          }
+        },
+        {
+          "client_id": "489552210236-vranl2g3i7uabch6cg9viihim17rr6mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwm8uyAtcss89tj2kTytb8fMVC0zJYZ8M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489552210236-vranl2g3i7uabch6cg9viihim17rr6mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

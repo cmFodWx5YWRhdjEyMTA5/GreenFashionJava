@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@id/title"
+        style="@style/TextStyle.Heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_background"
+        android:drawableEnd="@drawable/ic_arrow_up"
+        android:drawablePadding="16dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="@string/price"
+        android:textColor="@color/textDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeowls.store.greenfashion.ui.view.expandableLayout.ExpandableLayout
+        android:id="@+id/expand_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:el_duration="300"
+        app:el_expanded="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/child_title"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/price_range"
+                android:textColor="@color/textDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/min"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/textDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/child_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/currency"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LE"
+                android:textColor="@color/textDark"
+                app:layout_constraintBottom_toBottomOf="@id/min"
+                app:layout_constraintStart_toEndOf="@id/min"
+                app:layout_constraintTop_toTopOf="@id/min" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/currency2"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/LE"
+                android:textColor="@color/textDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/child_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/max"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/textDark"
+                app:layout_constraintBottom_toBottomOf="@id/currency2"
+                app:layout_constraintEnd_toStartOf="@id/currency2"
+                app:layout_constraintTop_toTopOf="@id/currency2" />
+
+            <com.zeowls.store.greenfashion.ui.view.RangeSeekBar
+                android:id="@+id/rangebar1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:lineColorEdge="@color/colorFocused"
+                app:lineColorSelected="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/min" />
+        </android.support.constraint.ConstraintLayout>
+    </com.zeowls.store.greenfashion.ui.view.expandableLayout.ExpandableLayout>
+</android.support.constraint.ConstraintLayout>

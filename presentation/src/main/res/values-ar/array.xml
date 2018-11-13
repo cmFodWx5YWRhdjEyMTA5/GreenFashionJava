@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="steps">
+        <item>يراجع</item>
+        <item>مؤكد</item>
+        <item>يشحن</item>
+        <item>إستلم</item>
+    </array>
+
+    <array name="location_type">
+        <item>منزل</item>
+        <item>عمل</item>
+    </array>
+
+    <array name="options_cat">
+        <item>أضف للعربة</item>
+        <item>مشاركة</item>
+    </array>
+
+    <array name="options_brand">
+        <item>أضف للعربة</item>
+        <item>مشاركة</item>
+    </array>
+
+    <array name="options_extend">
+        <item>أضف للعربة</item>
+        <item>مشاركة</item>
+    </array>
+</resources>
